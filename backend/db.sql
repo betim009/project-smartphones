@@ -9,7 +9,6 @@ CREATE TABLE phones (
   name VARCHAR(60) NOT NULL,
   brand VARCHAR(80) NOT NULL,
   model VARCHAR(100) NOT NULL,
-  idade INT NOT NULL,
   price DECIMAL(10, 2) NOT NULL,
   color VARCHAR(50) NOT NULL
 );

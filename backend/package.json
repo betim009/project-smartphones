@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "createdb": "mysql -u root -p < db.sql",
+    "seeddb": "mysql -u root -p < seed.sql",
+    "initdb": "npm run createdb && npm run seeddb",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
