@@ -1,0 +1,21 @@
+{
+  "name": "project-smartphones",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "createdb": "mysql -u root -p < db.sql",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betim009/project-smartphones.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/betim009/project-smartphones/issues"
+  },
+  "homepage": "https://github.com/betim009/project-smartphones#readme"
+}
