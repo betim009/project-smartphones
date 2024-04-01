@@ -7,6 +7,7 @@
     "createdb": "mysql -u root -p < ./db/db.sql",
     "seeddb": "mysql -u root -p < ./db/seed.sql",
     "initdb": "npm run createdb && npm run seeddb",
+    "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
