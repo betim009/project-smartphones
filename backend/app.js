@@ -17,7 +17,7 @@ app.get('/phones', async (req, res) => {
     const data = {
         "total": results.length,
         "results": results
-    }    
+    };
 
     return res.status(200).json(data);
 })
