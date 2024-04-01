@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "createdb": "mysql -u root -p < db.sql",
-    "seeddb": "mysql -u root -p < seed.sql",
+    "createdb": "mysql -u root -p < ./db/db.sql",
+    "seeddb": "mysql -u root -p < ./db/seed.sql",
     "initdb": "npm run createdb && npm run seeddb",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/betim009/project-smartphones/issues"
   },
-  "homepage": "https://github.com/betim009/project-smartphones#readme"
+  "homepage": "https://github.com/betim009/project-smartphones#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mysql2": "^3.9.3",
+    "nodemon": "^3.1.0"
+  }
 }
