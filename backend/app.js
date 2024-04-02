@@ -53,16 +53,6 @@ app.del('/phones/', async (req, res) => {
         [id]
     );
 
-    const [rows] = await connection.execute(
-        'SELECT * FROM phones ORDER BY id'
-    );
-
-    for (let i = 0; i < rows.length; i++) {
-        await connection.execute(
-            'UPDATE phones SET id = ? WHERE id = ?',
-            [i + 1, rows[i].id]
-        );
-    }
     return res.status(200).json({ "result": "Phone deleted" });
 });
 
