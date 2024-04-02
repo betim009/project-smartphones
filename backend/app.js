@@ -26,16 +26,23 @@ app.post('/phones', async (req, res) => {
     const { name, brand, model, price, color } = req.body;
 
     const [results] = await connection.execute(
-        'INSERT INTO phones (name, brand, model, price, color) VALUES (?, ?, ?, ?, ?)',
+        `INSERT INTO phones (name, brand, model, price, color)
+        VALUES (?, ?, ?, ?, ?)`,
         [name, brand, model, price, color]);
 
-    return res.status(200).json({"result": "Create phone"});
-
-
+    return res.status(200).json({ "result": "Create phone" });
 });
 
-app.put('/phones', async () => {
+app.put('/phones', async (req, res) => {
+    const { id, name, brand, model, price, color } = req.body;
 
+    const [results] = await connection.execute(
+        `UPDATE phones
+        SET name = ?, brand = ?, model = ?, price = ?, color = ?
+        WHERE id = ?`,
+        [name, brand, model, price, color, id]);
+
+    return res.status(200).json({ "result": "Update phone" });
 });
 
 app.del('/phones', async () => {
