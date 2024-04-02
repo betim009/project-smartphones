@@ -1,6 +1,6 @@
-const connection = require('./db/connection');
+const connection = require('../db/connection.js');
 
-export async function getAll(req, res) {
+async function getAll(req, res) {
     const [results] = await connection.execute(
         'SELECT * FROM phones'
     );
@@ -13,7 +13,7 @@ export async function getAll(req, res) {
     return res.status(200).json(data);
 };
 
-export async function create(req, res) {
+async function create(req, res) {
     const { name, brand, model, price, color } = req.body;
 
     const [results] = await connection.execute(
@@ -24,7 +24,7 @@ export async function create(req, res) {
     return res.status(200).json({ "result": "Create phone" });
 };
 
-export async function updateById(req, res) {
+async function updateById(req, res) {
     const { id, name, brand, model, price, color } = req.body;
 
     const [results] = await connection.execute(
@@ -36,7 +36,7 @@ export async function updateById(req, res) {
     return res.status(200).json({ "result": "Update phone" });
 };
 
-export function deleteById(req, res) {
+function deleteById(req, res) {
     const { id } = req.body;
 
     const result = connection.execute(
@@ -46,3 +46,10 @@ export function deleteById(req, res) {
 
     return res.status(200).json({ "result": "Phone deleted" });
 };
+
+module.exports = {
+    getAll,
+    create,
+    updateById,
+    deleteById
+}

@@ -16,13 +16,7 @@ VALUES
         10050.99,
         'silver'
     ),
-        (
-        'Iphone 14',
-        'Iphone',
-        '14',
-        4050.99,
-        'silver'
-    );
+    ('Iphone 14', 'Iphone', '14', 4050.99, 'silver');
 
 INSERT INTO
     sales (phone_id, sale_date, quantity, total_price)
