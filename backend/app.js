@@ -13,7 +13,7 @@ app.use(express.json());
 app.get('/phones', getAll);
 app.post('/phones', create);
 app.put('/phones', updateById);
-app.del('/phones/', deleteById);
+app.delete('/phones/', deleteById);
 
 // rota sales
 app.get('/sales', async (req, res) => {
