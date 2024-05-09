@@ -1,0 +1,22 @@
+{
+  "name": "backend-2.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "createdb": "mysql -u root -p < ./src/db/db.sql",
+    "seeddb": "mysql -u root -p < ./src/db/seed.sql",
+    "initdb": "npm run createdb && npm run seeddb",
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mysql2": "^3.9.7",
+    "nodemon": "^3.1.0"
+  }
+}
