@@ -1,4 +1,4 @@
-const { selectAll, selectId } = require("../../models/phones");
+const { selectAll, selectId, selectPage } = require("../../models/phones");
 
 async function findAll() {
     const results = await selectAll();
@@ -17,7 +17,13 @@ async function findById(id) {
     return results;
 }
 
+async function findPage(count, page) {
+    const results = await selectPage(count, page);
+    return results;
+}
+
 module.exports = {
     findAll,
-    findById
+    findById,
+    findPage
 };
