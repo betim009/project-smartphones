@@ -10,8 +10,5 @@ const router = express.Router();
 router.get('/', getAllPhones);
 router.get('/:id', getPhoneById);
 router.get('/page/:page?', getPhoneByPage);
-// router.post('/');
-// router.put('/:id');
-// router.delete('/:id');
 
 module.exports = router;

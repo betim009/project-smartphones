@@ -5,7 +5,7 @@ const divApp = document.getElementById('app');
 
 async function getAllPhones() {
   try {
-    const req = await fetch('http://localhost:3000/phones');
+    const req = await fetch('http://localhost:3001/phones');
     const res = await req.json();
 
     const { results } = res;
