@@ -1,8 +1,9 @@
 const express = require('express');
-const { 
+const {
     getAllPhones,
     getPhoneById,
-    getPhoneByPage } = require('../controllers/phones');
+    getPhoneByPage
+} = require('../controllers/phones');
 
 
 const router = express.Router();

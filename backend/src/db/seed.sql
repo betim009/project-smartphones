@@ -1,8 +1,14 @@
-USE smartphones
+USE smartphones;
 INSERT INTO
-    phones (name, brand, model, price, color, img)
-VALUES
-    (
+    phones (
+        name,
+        brand,
+        model,
+        price,
+        color,
+        img
+    )
+VALUES (
         'iPhone 15',
         'iPhone',
         '15',
@@ -49,18 +55,44 @@ VALUES
         5999,
         'blue',
         'https://www.apple.com/v/iphone-se/k/images/overview/shared-compare/compare_iphone_14__eeblt4putp26_small_2x.png'
+    ),
+    (
+        'Samsung Galaxy A15',
+        'Samsung',
+        'A15',
+        819,
+        'blue',
+        'https://http2.mlstatic.com/D_NQ_NP_909012-MLA74352948165_022024-O.webp'
+    ),
+    (
+        'Samsung Galaxy A35',
+        'Samsung',
+        'A35',
+        819,
+        'blue',
+        'https://http2.mlstatic.com/D_NQ_NP_909012-MLA74352948165_022024-O.webp'
     );
 
+
 INSERT INTO
-    sales (phone_id, sale_date, quantity, total_price)
-VALUES
-    (1, '2024-04-01', 2, 2899.98),
+    sales (
+        phone_id,
+        sale_date,
+        quantity,
+        total_price
+    )
+VALUES (1, '2024-04-01', 2, 2899.98),
     (2, '2024-04-02', 1, 10050.99);
 
 INSERT INTO
-    users (name, email, password_hash, address, phone)
-VALUES
-    (
+    users (
+        name,
+        email,
+        password_hash,
+        address,
+        phone
+    )
+VALUES (
         'Admin',
         'admim@email.com',
         'admim123',
