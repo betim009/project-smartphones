@@ -14,7 +14,7 @@ async function getPhoneById(req, res) {
 
 async function getPhoneByPage(req, res) {
     // Obtém o número da página a partir dos parâmetros da rota
-    const page = req.params.page || 1; // se não tiver retonar 1
+    const page = parseInt(req.params.page, 10) || 1; // Garante que page seja um número
 
     // Define o número de resultados por página
     const resultsPerPage = 5;

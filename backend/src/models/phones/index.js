@@ -18,8 +18,9 @@ const selectId = async (id) => {
 
 const selectPage = async (count, page) => {
     // Executa a consulta SQL com LIMIT e OFFSET
-    const [result] = await connection.execute(
-        `SELECT * FROM phones LIMIT ${count} OFFSET ${page}`
+    const [result] = await connection.query(
+        'SELECT * FROM phones LIMIT ? OFFSET ?',
+        [count, page]
     );
     return result;
 };
