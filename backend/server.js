@@ -1,7 +1,7 @@
 const app = require('./app');
-const connection = require('./db/connection');
+const connection = require('./src/db/connection');
 
-const PORT = 3000;
+const PORT = 3001;
 
 app.listen(PORT, async () => {
     console.log(`A conexão está sendo executada na porta ${PORT}`);
