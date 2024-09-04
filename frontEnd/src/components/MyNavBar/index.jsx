@@ -14,7 +14,7 @@ export default function MyNavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link to="/">Home</Nav.Link>
-            <Nav.Link to="#link">Link</Nav.Link>
+            <Nav.Link to="#link">Phones</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
